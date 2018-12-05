@@ -6,6 +6,7 @@ export const MyTheme = StyleSheet.create({
         width:"100%",
         alignItems: 'center',
         justifyContent: 'space-evenly',
+        backgroundColor:"#D9D9D9"
      
     },
     imageLogo:{
@@ -13,8 +14,8 @@ export const MyTheme = StyleSheet.create({
         width: 150
     },
     displayText:{
-       // color:"#298F78",
-       color:"red",
+        color:"#298F78",
+      
         fontSize: 20,
         fontWeight: 'bold',
     }

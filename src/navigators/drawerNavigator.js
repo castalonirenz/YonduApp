@@ -1,15 +1,43 @@
-import { createDrawerNavigator, createAppContainer } from "react-navigation";
-import { FirstRouteStackContainer } from "./stackNavigator";
+import { createDrawerNavigator, createAppContainer, DrawerItems } from "react-navigation";
+import { SDevelopmentContainer, MServiceStackContainer, ITStaffingStackContainer, CyberSecurityStackContainer} from "./FirstRouteStack";
+import React, { Component } from "react";
+import {
+  View,
+  SafeAreaView,
+  ScrollView,
 
+} from "react-native";
+
+const CustomDrawerComponent = props => (
+    <SafeAreaView style={{ flex: 1 }}>
+    <View style={{height: 150, backgroundColor: 'orange', alignItems:'center', justifyContent: 'center'}}>
+    </View>
+      <ScrollView>
+        <DrawerItems {...props} />
+      </ScrollView>
+    </SafeAreaView>
+  );
 
 const FirstRouteDrawer = createDrawerNavigator({
-    "Software Development":{
-        screen: FirstRouteStackContainer
+    "Software Development":{    
+        screen: SDevelopmentContainer
+    },
+    "Managed Services":{
+        screen: MServiceStackContainer
+    },
+    "IT Staffing":{
+        screen: ITStaffingStackContainer
+    }
+    ,
+    "Cyber Security":{
+        screen: CyberSecurityStackContainer
     }
 },{
-    navigationOptions:{
-        
-    }
+    contentComponent: CustomDrawerComponent,
+    contentOptions:{
+        activeTintColor:"#298F78",       
+    },
+    
 })
 
 export const FirstRouteContainer = createAppContainer(FirstRouteDrawer)
