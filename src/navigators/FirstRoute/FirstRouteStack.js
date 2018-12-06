@@ -1,18 +1,17 @@
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import { Company_Yondu } from "../stringName/stringName";
-import SDevelopment from "../Routes/FirstRoute/SDevelopment"
+import { Company } from "../../Array/stringName";
+
 import React, { Component } from "react";
 import Icon from "react-native-vector-icons/Ionicons";
 import { TouchableOpacity } from "react-native";
-import MServices from "../Routes/FirstRoute/MServices";
-import ITStaffing from '../Routes/FirstRoute/ITStaffing'
-import CyberSecurity from '../Routes/FirstRoute/CSecurity'
+import { SDevelopment,MServices,ITStaffing,CyberSecurity,TrainingDevelopment,Esolution } from "../../screens/Routes/FirstRoute/FirstRouteIndex";
+import { subRouteStackContainer } from "./subRoute";
 const SDevelopmentStack = createStackNavigator({
     Home: {
-        screen:SDevelopment,
+        screen:subRouteStackContainer,
         navigationOptions: ({ navigation }) => ({
             
-            title: Company_Yondu.itemOne,
+            title: Company.itemOne,
             headerTitleStyle: { textAlign: 'center', flex: 1},
             headerLeft: (
                 <TouchableOpacity 
@@ -36,7 +35,7 @@ const MServiceStack = createStackNavigator({
         screen:MServices,
         navigationOptions: ({ navigation }) => ({
             
-            title: Company_Yondu.itemOne,
+            title: Company.itemOne,
             headerTitleStyle: { textAlign: 'center', flex: 1},
             headerLeft: (
                 <TouchableOpacity 
@@ -60,7 +59,7 @@ const ITStaffingStack = createStackNavigator({
         screen:ITStaffing,
         navigationOptions: ({ navigation }) => ({
             
-            title: Company_Yondu.itemOne,
+            title: Company.itemOne,
             headerTitleStyle: { textAlign: 'center', flex: 1},
             headerLeft: (
                 <TouchableOpacity 
@@ -84,7 +83,7 @@ const CyberSecurityStack = createStackNavigator({
         screen:CyberSecurity,
         navigationOptions: ({ navigation }) => ({
             
-            title: Company_Yondu.itemOne,
+            title: Company.itemOne,
             headerTitleStyle: { textAlign: 'center', flex: 1},
             headerLeft: (
                 <TouchableOpacity 
@@ -102,3 +101,51 @@ const CyberSecurityStack = createStackNavigator({
 
 })
 export const CyberSecurityStackContainer = createAppContainer(CyberSecurityStack)
+
+const TDevelopmentStack = createStackNavigator({
+    Home: {
+        screen:TrainingDevelopment,
+        navigationOptions: ({ navigation }) => ({
+            
+            title: Company.itemOne,
+            headerTitleStyle: { textAlign: 'center', flex: 1},
+            headerLeft: (
+                <TouchableOpacity 
+                onPress={()=>navigation.toggleDrawer()}
+                style={{ paddingLeft: 20 }}>
+                  <Icon
+                    name="md-menu"
+                    // color={tintColor}
+                    size={24}
+                  />
+                </TouchableOpacity>
+              ),
+          })
+    }
+
+})
+export const TDevelopmentStackContainer = createAppContainer(TDevelopmentStack)
+
+const ESolutionStack = createStackNavigator({
+    Home: {
+        screen:Esolution,
+        navigationOptions: ({ navigation }) => ({
+            
+            title: Company.itemOne,
+            headerTitleStyle: { textAlign: 'center', flex: 1},
+            headerLeft: (
+                <TouchableOpacity 
+                onPress={()=>navigation.toggleDrawer()}
+                style={{ paddingLeft: 20 }}>
+                  <Icon
+                    name="md-menu"
+                    // color={tintColor}
+                    size={24}
+                  />
+                </TouchableOpacity>
+              ),
+          })
+    }
+
+})
+export const ESolutionStackContainer = createAppContainer(ESolutionStack)

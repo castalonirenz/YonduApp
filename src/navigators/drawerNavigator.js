@@ -1,6 +1,8 @@
 import { createDrawerNavigator, createAppContainer, DrawerItems } from "react-navigation";
-import { SDevelopmentContainer, MServiceStackContainer, ITStaffingStackContainer, CyberSecurityStackContainer} from "./FirstRouteStack";
+import { SDevelopmentContainer, MServiceStackContainer, ITStaffingStackContainer, 
+CyberSecurityStackContainer, TDevelopmentStackContainer, ESolutionStackContainer} from "./FirstRoute/FirstRouteStack";
 import React, { Component } from "react";
+import { Company } from "../Array/stringName";
 import {
   View,
   SafeAreaView,
@@ -10,32 +12,41 @@ import {
 
 const CustomDrawerComponent = props => (
     <SafeAreaView style={{ flex: 1 }}>
-    <View style={{height: 150, backgroundColor: 'orange', alignItems:'center', justifyContent: 'center'}}>
-    </View>
+    
       <ScrollView>
-        <DrawerItems {...props} />
+        <DrawerItems {...props} 
+        />
       </ScrollView>
     </SafeAreaView>
   );
 
 const FirstRouteDrawer = createDrawerNavigator({
-    "Software Development":{    
+    [Company.itemOne]:{    
         screen: SDevelopmentContainer
     },
-    "Managed Services":{
+    [Company.itemTwo]:{
         screen: MServiceStackContainer
     },
-    "IT Staffing":{
+    [Company.itemThree]:{
         screen: ITStaffingStackContainer
     }
     ,
-    "Cyber Security":{
+    [Company.itemFour]:{
         screen: CyberSecurityStackContainer
+    },
+    [Company.itemFive]:{
+        screen: TDevelopmentStackContainer
+    },
+    [Company.itemSix]:{
+        screen: ESolutionStackContainer
     }
 },{
     contentComponent: CustomDrawerComponent,
     contentOptions:{
-        activeTintColor:"#298F78",       
+        activeTintColor:"#298F78",
+        labelStyle:{
+            fontSize: 18
+        }       
     },
     
 })

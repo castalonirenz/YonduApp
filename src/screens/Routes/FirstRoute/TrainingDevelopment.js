@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-class TraningDevelopment extends Component {
+class TrainingDevelopment extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,10 +11,10 @@ class TraningDevelopment extends Component {
   render() {
     return (
       <View>
-        <Text> TraningDevelopment </Text>
+        <Text> TrainingDevelopment </Text>
       </View>
     );
   }
 }
 
-export default TraningDevelopment;
+export default TrainingDevelopment;
