@@ -5,7 +5,6 @@ export const MyTheme = StyleSheet.create({
         flex: 1,
         width:"100%",
         alignItems: 'center',
-       
         justifyContent: 'space-evenly',
         backgroundColor:"#FFFFFF"
      
@@ -29,7 +28,9 @@ export const MyTheme = StyleSheet.create({
     displayImageWrapper:{
         width:"100%",
         flex: 1,
-        
-        
+    },
+    headerWrapper:{
+        textAlign: 'center', 
+        width:"80%"
     }
 })

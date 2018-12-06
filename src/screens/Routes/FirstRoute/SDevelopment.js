@@ -1,9 +1,26 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 import { MyTheme } from "../../../themes/globalTheme";
-import { Button } from "native-base";
 import { MyButton } from "../../../components/button";
+import { Company } from "../../../Array/stringName";
 class SDevelopment extends Component {
+  static navigationOptions = ({ navigation }) => ({
+
+    title: Company.itemOne,
+    headerTitleStyle: MyTheme.headerWrapper,
+    headerLeft: (
+        <TouchableOpacity
+        onPress={()=>navigation.toggleDrawer()}
+        style={{ paddingLeft: 20 }}>
+          <Icon
+            name="md-menu"
+            // color={tintColor}
+            size={24}
+          />
+        </TouchableOpacity>
+      ),
+      })
   render() {
     return (
       <View style={MyTheme.Container}>
