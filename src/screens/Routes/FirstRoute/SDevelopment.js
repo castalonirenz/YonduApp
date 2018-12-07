@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-nati
 import Icon from "react-native-vector-icons/Ionicons";
 import { MyTheme } from "../../../themes/globalTheme";
 import { MyButton } from "../../../components/button";
-import { Company } from "../../../Array/stringName";
+import { Company, WhatWeDo } from "../../../Array/stringName";
 class SDevelopment extends Component {
   static navigationOptions = ({ navigation }) => ({
 
@@ -24,16 +24,29 @@ class SDevelopment extends Component {
   render() {
     return (
       <View style={MyTheme.Container}>
-        <ScrollView
+        <ScrollView showsVerticalScrollIndicator={false}
           style={{ width: "90%" }}
           contentContainerStyle={styles.scrollStyle}
         >
-          <View style={styles.subContainer}>
-            <Text> Web App </Text>
-            <Text> Mobile App </Text>
-            <Text> Enterprise Solution </Text>
-            <Text> System Integration </Text>
-          </View>
+         
+          {WhatWeDo.map((item, key) => (
+            <View style={styles.itemContainer} key={key}>
+                {/* HEADER AND ICON */}
+                <View style={styles.itemHeaderContainer}>
+                <Icon name={item.Icon} size={50} color="black"/>
+                <Text style={styles.itemHeaderStyle}>{item.title}</Text>
+                </View>
+                {/* ITEM */}
+                <View style={styles.itemContentContainer}>
+                {item.Content.map((item, key) =>
+                  <Text style={styles.itemContentStyle} key={key}>{item}</Text>
+                  )}
+                
+                </View>
+              </View>
+            ))}
+          
+         
         </ScrollView>
         <View style={styles.buttonWrapper}>
           <MyButton
@@ -45,16 +58,37 @@ class SDevelopment extends Component {
   }
 }
 const styles = StyleSheet.create({
-  subContainer: {
-    flex: 1,
-    width: "100%"
-  },
   scrollStyle: {
     flexGrow: 1,
-    backgroundColor: "green"
   },
   buttonWrapper:{
     width:"90%"
+  },
+  itemContainer:{
+    justifyContent: 'center',
+    paddingLeft: 20,
+    marginTop: 20,
+    width: "100%",
+    borderLeftWidth: 5,
+    borderLeftColor: "#A5FCCB",
+    elevation: 20,
+    backgroundColor:"white"
+  },
+  itemHeaderContainer:{
+    flexDirection:"row",
+    alignItems: 'center',
+  },
+  itemContentContainer:{
+    flexDirection:"column"
+  },
+  itemHeaderStyle:{
+    color:"black",
+    fontSize: 18,
+    marginLeft: 10,
+  },
+  itemContentStyle:{
+    color:"black",
+    fontSize: 15
   }
 });
 export default SDevelopment;

@@ -103,4 +103,74 @@ export const SoftwareDevelopment = [
      
     }
   ];
+
+  export const WhatWeDo = [
+    {
+      id: 0,
+      title: "Software Development",
+      Icon: "ios-desktop",
+      Content:[
+        "Web Application Development",
+        "Mobile Application Development",
+        "Enterprise Solutions",
+        "System Integration"
+      ]
+     
+    },
+    {
+      id: 1,
+      title: "Manage Services ",
+      Icon: "ios-filing",
+      Content:[
+        "Managed Desktop Service",
+        "Managed Expert Service",
+        "Managed System Admin",
+        "Managed App Service"
+      ]
+     
+    },
+    {
+      id: 2,
+      title: "IT Staffing",
+      Icon: "ios-people",
+      Content:[
+        "Staff Augmentation",
+        
+      ]
+    },
+    {
+      id: 3,
+      title: "Cyber Security",
+      Icon: "ios-unlock",
+      Content:[
+        "Vulnerability Assesment",
+        "Software QA as as Service",
+      ]
+      
+    },
+    {
+      id: 4,
+      title: "Trainings & Development",
+      Icon: "ios-ribbon",
+      Content:[
+        "Java",
+        "Blockchain",
+       
+      ]
+     
+    }
+    ,
+    {
+      id: 5,
+      title: "Enterprise Solutions",
+      Icon: "ios-apps",
+      Content:[
+        "ViMa",
+        "HR Solutions",
+        "SMS (M360)",
+        "Document Management System"
+      ]
+     
+    }
+  ];
   
