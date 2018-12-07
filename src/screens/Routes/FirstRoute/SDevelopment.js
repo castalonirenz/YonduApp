@@ -67,11 +67,12 @@ const styles = StyleSheet.create({
   itemContainer:{
     justifyContent: 'center',
     paddingLeft: 20,
-    marginTop: 20,
+    paddingBottom: 10,
+    marginTop: 30,
     width: "100%",
     borderLeftWidth: 5,
     borderLeftColor: "#A5FCCB",
-    elevation: 20,
+    elevation: 10,
     backgroundColor:"white"
   },
   itemHeaderContainer:{

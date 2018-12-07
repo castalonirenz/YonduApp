@@ -13,6 +13,7 @@ import {
   Esolution,
   Quota
 } from "../../screens/Routes/FirstRoute/FirstRouteIndex";
+import ThankYouPage from "../../screens/Routes/FirstRoute/ThankYou";
 
 const SDevelopmentStack = createStackNavigator(
   {
@@ -21,6 +22,9 @@ const SDevelopmentStack = createStackNavigator(
     },
     Quota: {
       screen: Quota
+    },
+    ThankYou:{
+      screen: ThankYouPage
     }
   }
 );

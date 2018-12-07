@@ -14,9 +14,9 @@ export const MyTheme = StyleSheet.create({
         width: 150
     },
     displayText:{
-        color:"#298F78",
+        color:"#fff",
         
-        fontSize: 20,
+        fontSize: 24,
         fontWeight: 'bold',
     },
     displayImage:{
@@ -32,5 +32,10 @@ export const MyTheme = StyleSheet.create({
     headerWrapper:{
         textAlign: 'center', 
         width:"80%"
-    }
+    },
+    inputWrapper: {
+        borderBottomColor:"#EFF0F4",
+        borderBottomWidth: 2,
+      },
+      
 })

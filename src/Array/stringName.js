@@ -11,99 +11,74 @@ export const Company = {
 export const solutions = [
   {
     id: 0,
-    name: "Software Development",
+    name: "What solution do you need?",
+    "What solution do you need?":[
+      "Services",
+    ]
    
   },
-    {
-      id: 1,
-      name: "Managed Services",
-     
-    },
-    {
-      id: 2,
-      name: "IT Staffing",
-    
-    },
-    {
-      id: 3,
-      name: "Cyber Security",
-      
-    },
-    {
-      id: 4,
-      name: "Trainings & Development",
-     
-    }
-    ,
-    {
-      id: 5,
-      name: "Enterprise Solutions",
-     
-    }
-  ];
-
-export const SoftwareDevelopment = [
   {
-    id: 0,
-    name: "Services",
+    id: 1,
+    name: "Software Development",
+    "Software Development":[
+      "Web Application Development",
+      "Mobile Application Development",
+      "Enterprise Solution",
+      "System Integration",
+    ]
    
   },
     {
-      id: 1,
-      name: "Web Application Development",
-     
-    },
-    {
       id: 2,
-      name: "Mobile Application Development",
-    
+      name: "Managed Services",
+      "Managed Services":[
+        "Managed Desktop Service",
+        "Managed Expert Service",
+        "Managed System Admin",
+        "Managed App Services"
+      ]
+     
     },
     {
       id: 3,
-      name: "Enterprise Solution",
-      
-    },
-    {
-      id: 4,
-      name: "System Integration",
-     
-    }
-  ];
-
-  export const ManagedServices = [
-    {
-      id: 0,
-      name: "Services",
-     
-    },
-    {
-      id: 1,
-      name: "Managed Desktop Service",
-     
-    },
-    {
-      id: 2,
-      name: "Managed Expert Service",
+      name: "IT Staffing",
+      "IT Staffing":[
+        "Staff Augmentation"
+      ]
     
     },
     {
-      id: 3,
-      name: "Managed System Admin",
+      id: 4,
+      name: "Cyber Security",
+      "Cyber Security":[
+        "Vulnerability Assesment",
+        "Software QA as as Service"
+      ]
       
     },
     {
-      id: 4,
-      name: "Managed App Services",
+      id: 5,
+      name: "Trainings & Development",
+      "Trainings & Development":[
+        "Java",
+        "Blockchain"
+      ]
      
     }
     ,
     {
-      id: 5,
-      name: "AWS Cloud",
+      id: 6,
+      name: "Enterprise Solutions",
+      "Enterprise Solutions":[
+        "ViMa",
+        "HR Solutions",
+        "SMS (M360)",
+        "Document Management System"
+      ]
      
     }
   ];
-
+  
   export const WhatWeDo = [
     {
       id: 0,
