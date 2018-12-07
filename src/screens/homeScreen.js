@@ -11,7 +11,7 @@ class HomeScreen extends Component {
     return (
       <View style={MyTheme.Container}>
         <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, "FirstRoute")}>
+          <TouchableOpacity onPress={this._Navigate.bind(this, Company.itemOne)}>
             <ImageBackground
            
               style={MyTheme.displayImage}
@@ -23,7 +23,7 @@ class HomeScreen extends Component {
         </View>
 
         <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, "FirstRoute")}>
+          <TouchableOpacity onPress={this._Navigate.bind(this, Company.itemTwo)}>
             <ImageBackground
               style={MyTheme.displayImage}
               source={require("../../assets/industries.jpg")}

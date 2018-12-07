@@ -1,6 +1,5 @@
 import { createDrawerNavigator, createAppContainer, DrawerItems } from "react-navigation";
-import { SDevelopmentContainer, MServiceStackContainer, ITStaffingStackContainer, 
-CyberSecurityStackContainer, TDevelopmentStackContainer, ESolutionStackContainer} from "./FirstRoute/WhatWeDoStack";
+import { SDevelopmentContainer, IndustriesStackContainer} from "./FirstRoute/StackNavigator";
 import React, { Component } from "react";
 import { Company } from "../Array/stringName";
 import {
@@ -25,20 +24,20 @@ const FirstRouteDrawer = createDrawerNavigator({
         screen: SDevelopmentContainer
     },
     [Company.itemTwo]:{
-        screen: MServiceStackContainer
+        screen: IndustriesStackContainer
     },
     [Company.itemThree]:{
-        screen: ITStaffingStackContainer
+        screen: SDevelopmentContainer
     }
     ,
     [Company.itemFour]:{
-        screen: CyberSecurityStackContainer
+        screen: SDevelopmentContainer
     },
     [Company.itemFive]:{
-        screen: TDevelopmentStackContainer
+        screen: SDevelopmentContainer
     },
     [Company.itemSix]:{
-        screen: ESolutionStackContainer
+        screen: SDevelopmentContainer
     }
 },{
     contentComponent: CustomDrawerComponent,
