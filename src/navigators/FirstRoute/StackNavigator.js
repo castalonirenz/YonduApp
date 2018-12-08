@@ -5,9 +5,9 @@ import {
   SDevelopment,
   Quota,
   Industries
-} from "../../screens/Routes/FirstRoute/FirstRouteIndex";
-import ThankYouPage from "../../screens/Routes/FirstRoute/ThankYou";
-import Insights from "../../screens/Routes/FirstRoute/Insights";
+} from "../../screens/Routes/FirstRouteIndex";
+import ThankYouPage from "../../screens/Routes/SoftwareDevelopment/ThankYou";
+import Insights from "../../screens/Routes/Insights/Insights";
 
 const SDevelopmentStack = createStackNavigator(
   {
