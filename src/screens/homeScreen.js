@@ -34,7 +34,7 @@ class HomeScreen extends Component {
         </View>
 
         <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, "FirstRoute")}>
+          <TouchableOpacity onPress={this._Navigate.bind(this, Company.itemThree)}>
             <ImageBackground
               style={MyTheme.displayImage}
               source={require("../../assets/insights.png")}

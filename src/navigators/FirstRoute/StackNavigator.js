@@ -7,6 +7,7 @@ import {
   Industries
 } from "../../screens/Routes/FirstRoute/FirstRouteIndex";
 import ThankYouPage from "../../screens/Routes/FirstRoute/ThankYou";
+import Insights from "../../screens/Routes/FirstRoute/Insights";
 
 const SDevelopmentStack = createStackNavigator(
   {
@@ -33,3 +34,10 @@ const IndustriesStack = createStackNavigator(
 export const IndustriesStackContainer = createAppContainer(IndustriesStack);
 
 
+const InsightsStack = createStackNavigator({
+    Insights:{
+      screen: Insights
+    }
+})
+
+export const InsightsContainer = createAppContainer(InsightsStack);
