@@ -9,6 +9,7 @@ import {
 import ThankYouPage from "../../screens/Routes/SoftwareDevelopment/ThankYou";
 import Insights from "../../screens/Routes/Insights/Insights";
 import InsightsData from "../../screens/Routes/Insights/InsightsData";
+import ContactUs from "../../screens/Routes/contact_us/contact_us";
 
 const SDevelopmentStack = createStackNavigator(
   {
@@ -45,4 +46,12 @@ const InsightsStack = createStackNavigator({
 })
 
 export const InsightsContainer = createAppContainer(InsightsStack);
+
+const contactUsStack = createStackNavigator({
+  Contact:{
+    screen: ContactUs
+  }
+})
+
+export const ContactUsContainer = createAppContainer(contactUsStack)
 
