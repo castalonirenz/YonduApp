@@ -3,12 +3,14 @@ import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 import { MyTheme } from "../../../themes/globalTheme";
 import { MyButton } from "../../../components/button";
 class ThankYouPage extends Component {
-
+  static navigationOptions ={
+    header: null
+  }
 
   render() {
     return (
       <View style={MyTheme.Container}>
-        <ScrollView contentContainerStyle={{flexGrow: 1}}>
+        <ScrollView style={{width:"100%"}}contentContainerStyle={{flexGrow: 1}}>
         <View style={styles.imageWrapper}>
         <Image
         style={MyTheme.imageLogo} 
@@ -42,7 +44,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonWrapper:{
-    width:"90%"
+    width:"90%",
+    alignSelf: 'center',
   }
 })
 

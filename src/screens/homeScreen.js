@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
 import { MyTheme } from "../themes/globalTheme";
 import { Company } from "../Array/stringName";
+import { home } from "../Array/homeScreenArray";
 class HomeScreen extends Component {
   _Navigate = val => {
     this.props.navigation.navigate(val);
@@ -10,72 +11,21 @@ class HomeScreen extends Component {
   render() {
     return (
       <View style={MyTheme.Container}>
-        <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, Company.itemOne)}>
-            <ImageBackground
-           
-              style={MyTheme.displayImage}
-              source={require("../../assets/what_we_do.png")}
+        
+          {home.map((item, key) => (
+            <View key={key} style={MyTheme.displayImageWrapper}>
+            <TouchableOpacity 
+              onPress={this._Navigate.bind(this, item.name)}
             >
-              <Text style={MyTheme.displayText}> {Company.itemOne} </Text>
-            </ImageBackground>
-          </TouchableOpacity>
-        </View>
-
-        <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, Company.itemTwo)}>
-            <ImageBackground
-              style={MyTheme.displayImage}
-              source={require("../../assets/industries.jpg")}
-            >
-              <Text style={MyTheme.displayText}> {Company.itemTwo} </Text>
-            </ImageBackground>
-          </TouchableOpacity>
-        </View>
-
-        <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, Company.itemThree)}>
-            <ImageBackground
-              style={MyTheme.displayImage}
-              source={require("../../assets/insights.png")}
-            >
-              <Text style={MyTheme.displayText}> {Company.itemThree} </Text>
-            </ImageBackground>
-          </TouchableOpacity>
-        </View>
-
-        <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, "FirstRoute")}>
-            <ImageBackground
-              style={MyTheme.displayImage}
-              source={require("../../assets/careers.jpg")}
-            >
-              <Text style={MyTheme.displayText}> {Company.itemFour} </Text>
-            </ImageBackground>
-          </TouchableOpacity>
-        </View>
-
-        <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, "FirstRoute")}>
-            <ImageBackground
-              style={MyTheme.displayImage}
-              source={require("../../assets/about_yondu.jpg")}
-            >
-              <Text style={MyTheme.displayText}> {Company.itemFive} </Text>
-            </ImageBackground>
-          </TouchableOpacity>
-        </View>
-
-        <View style={MyTheme.displayImageWrapper}>
-          <TouchableOpacity onPress={this._Navigate.bind(this, "FirstRoute")}>
-            <ImageBackground
-              style={MyTheme.displayImage}
-              source={require("../../assets/contact_us.jpg")}
-            >
-              <Text style={MyTheme.displayText}> {Company.itemSix} </Text>
-            </ImageBackground>
-          </TouchableOpacity>
-        </View>
+              <ImageBackground
+                style={MyTheme.displayImage}
+                source={item.image}
+              >
+                <Text style={MyTheme.displayText}> {item.name} </Text>
+              </ImageBackground>
+            </TouchableOpacity>
+            </View>
+          ))}
       </View>
     );
   }

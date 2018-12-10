@@ -8,6 +8,7 @@ import {
 } from "../../screens/Routes/FirstRouteIndex";
 import ThankYouPage from "../../screens/Routes/SoftwareDevelopment/ThankYou";
 import Insights from "../../screens/Routes/Insights/Insights";
+import InsightsData from "../../screens/Routes/Insights/InsightsData";
 
 const SDevelopmentStack = createStackNavigator(
   {
@@ -37,7 +38,11 @@ export const IndustriesStackContainer = createAppContainer(IndustriesStack);
 const InsightsStack = createStackNavigator({
     Insights:{
       screen: Insights
+    },
+    InsightsData:{
+      screen: InsightsData
     }
 })
 
 export const InsightsContainer = createAppContainer(InsightsStack);
+

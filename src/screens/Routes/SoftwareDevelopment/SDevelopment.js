@@ -1,10 +1,21 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import { MyTheme } from "../../../themes/globalTheme";
 import { MyButton } from "../../../components/button";
 import { Company, WhatWeDo } from "../../../Array/stringName";
 class SDevelopment extends Component {
+
+  state ={
+    headerFontSize: 20,
+    contentFontSize: 17,
+    buttonHeight: 40,
+  }
+  componentDidMount(){
+    if(Dimensions.get('window').width <= 360){
+      this.setState({headerFontSize: 15, contentFontSize: 14, buttonHeight: 30})
+    }
+  }
   static navigationOptions = ({ navigation }) => ({
 
     title: Company.itemOne,
@@ -21,6 +32,8 @@ class SDevelopment extends Component {
         </TouchableOpacity>
       ),
       })
+
+  
   render() {
     return (
       <View style={MyTheme.Container}>
@@ -34,12 +47,12 @@ class SDevelopment extends Component {
                 {/* HEADER AND ICON */}
                 <View style={styles.itemHeaderContainer}>
                 <Icon name={item.Icon} size={50} color="black"/>
-                <Text style={styles.itemHeaderStyle}>{item.title}</Text>
+                <Text style={[MyTheme.headerText, styles.itemHeaderStyle, {fontSize:this.state.headerFontSize}]}>{item.title}</Text>
                 </View>
                 {/* ITEM */}
                 <View style={styles.itemContentContainer}>
                 {item.Content.map((item, key) =>
-                  <Text style={styles.itemContentStyle} key={key}>{item}</Text>
+                  <Text style={[MyTheme.textContent, styles.itemContentStyle, {fontSize:this.state.contentFontSize}]} key={key}>{item}</Text>
                   )}
                 
                 </View>
@@ -84,12 +97,12 @@ const styles = StyleSheet.create({
   },
   itemHeaderStyle:{
     color:"black",
-    fontSize: 18,
+    fontSize: 20,
     marginLeft: 10,
   },
   itemContentStyle:{
     color:"black",
-    fontSize: 15
+    fontSize: 17
   }
 });
 export default SDevelopment;

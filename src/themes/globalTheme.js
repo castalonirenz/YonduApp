@@ -21,12 +21,12 @@ export const MyTheme = StyleSheet.create({
     height: "100%",
     width: "100%",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   displayImageWrapper: {
     width: "100%",
     flex: 1
-  },
+  },  
   headerWrapper: {
     textAlign: "center",
     width: "80%"

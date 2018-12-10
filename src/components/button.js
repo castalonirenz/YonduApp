@@ -4,10 +4,10 @@ export const MyButton = props => (
     <View>
         <TouchableOpacity 
         {...props}
-        style={[styles.ButtonStyle]}>
+        style={[styles.ButtonStyle, props.style]}>
             <Text
             {...props}
-            style={[styles.textStyle]}>
+            style={[styles.textStyle, props.style]}>
                 {props.children}
             </Text>
         </TouchableOpacity>
