@@ -6,28 +6,34 @@ import {
   ImageBackground,
   StyleSheet,
   ScrollView,
-  Dimensions
+  Dimensions,
+  Share
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import { MyTheme } from "../../../themes/globalTheme";
 import { Company } from "../../../Array/stringName";
 class InsightsData extends Component {
 
-    state={
-        fontBody: 17,
-        headerText: 20,
-        iconSize: 40
-
-    }
-    componentDidMount(){
-        if(Dimensions.get('window').width <= 360){
-            this.setState({fontBody: 14, headerText: 16, iconSize: 30})
-        }
-    }
   static navigationOptions = {
     header: null
   };
   
+  _onShare(body, details, date, img) {
+    Share.share({
+      message: body + " " + details +" " + "date:" + date +" Image" + img,
+      url: 'http://bam.tech',
+      title: 'Wow, did you see that?'
+    }, {
+      // Android only:
+      dialogTitle: 'Share Development Experience',
+      // iOS only:
+      excludedActivityTypes: [
+        'com.apple.UIKit.activity.PostToTwitter'
+      ]
+    })
+
+  
+  }
 
   render() {
     const { navigation } = this.props;
@@ -35,7 +41,15 @@ class InsightsData extends Component {
     const details = navigation.getParam("details", "NO-details");
     const date = navigation.getParam("date", "NO-date");
     const img = navigation.getParam("img", "NO-img");
-    console.log(img);
+    
+    let fontBody = 17
+    let headerText = 20
+    let iconSize = 40
+    if(Dimensions.get('window').width <= 360){
+      fontBody = 14
+     headerText = 16
+       iconSize = 30
+  }
     return (
        
       <View style={MyTheme.Container}>
@@ -44,14 +58,14 @@ class InsightsData extends Component {
           <ImageBackground style={styles.imageBackground} source={{ uri: img }}>
             <View style={styles.topHeader}>
               <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
-                <Icon name="ios-arrow-back" size={this.state.iconSize} color="#FFF" />
+                <Icon name="ios-arrow-back" size={iconSize} color="#FFF" />
               </TouchableOpacity>
-              <TouchableOpacity>
-                <Icon name="ios-share-alt" size={this.state.iconSize} color="#FFF" />
+              <TouchableOpacity onPress={this._onShare.bind(this, body,details,date,img)}>
+                <Icon name="ios-share" size={iconSize} color="#FFF" />
               </TouchableOpacity>
             </View>
             <View style={styles.bottomHeader}>
-              <Text style={[MyTheme.headerText, { color: "#fff", paddingLeft: 20, fontSize: this.state.headerText }]}>
+              <Text style={[MyTheme.headerText, { color: "#fff", paddingLeft: 20, fontSize: headerText }]}>
                 LoopBack is a highly-extensible, open-source Node.js framework
               </Text>
             </View>
@@ -64,7 +78,7 @@ class InsightsData extends Component {
           </View>
           <ScrollView>
           <View style={styles.bodyWrapper}>
-            <Text style={[MyTheme.textContent, { color: "#131414", fontSize:this.state.fontBody }]}>
+            <Text style={[MyTheme.textContent, { color: "#131414", fontSize:fontBody }]}>
               {body}
             </Text>
           </View>

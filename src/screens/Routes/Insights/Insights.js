@@ -66,7 +66,18 @@ class Insights extends Component {
   })
   } 
   render() {
-    
+   let headerFontSize = 20
+   let textContentFontSize = 17
+   let miniFontSize = 13
+  let imageHeight= 90
+  let imageWidth = 90
+  if(Dimensions.get('screen').width <= 360){
+    imageHeight = 80
+    imageWidth = 80
+    headerFontSize = 17
+    textContentFontSize = 14
+    miniFontSize = 11
+  }
     return (
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View style={{ flex: 1, alignItems: "center" }}>
@@ -79,7 +90,7 @@ class Insights extends Component {
                   numberOfLines={1}
                   style={[
                     MyTheme.headerText,
-                    { fontSize: this.state.headerFontSize }
+                    { fontSize: headerFontSize }
                   ]}
                 >
                   {" "}
@@ -89,15 +100,15 @@ class Insights extends Component {
                   numberOfLines={2}
                   style={[
                     MyTheme.textContent,
-                    { fontSize: this.state.textContentFontSize }
+                    { fontSize: textContentFontSize }
                   ]}
                 >
                   {" "}
                   {items.content}{" "}
                 </Text>
                 <View style={{ flexDirection: "row", marginTop: 10 }}>
-                  <Text style={{fontSize:this.state.miniFontSize, color:"#4EC1FE"}}>{items.details + " - "}</Text>
-                  <Text style={{fontSize:this.state.miniFontSize, color:"#4EC1FE"}}> {items.date} </Text>
+                  <Text style={{fontSize:miniFontSize, color:"#4EC1FE"}}>{items.details + " - "}</Text>
+                  <Text style={{fontSize:miniFontSize, color:"#4EC1FE"}}> {items.date} </Text>
                 </View>
               </View>
               <View style={styles.imageHolder}>
@@ -106,8 +117,8 @@ class Insights extends Component {
                   style={[
                     styles.image,
                     {
-                      height: this.state.imageStyle.height,
-                      width: this.state.imageStyle.width
+                      height: imageHeight,
+                      width: imageWidth
                     }
                   ]}
                   source={{ uri: items.img }}
@@ -130,7 +141,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     borderBottomColor: "#D8D8D8",
     borderBottomWidth: 1,
-    paddingBottom: 5,
+    paddingBottom: 10,
     paddingRight: 20
   },
   itemContainer: {

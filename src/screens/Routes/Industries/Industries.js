@@ -30,18 +30,18 @@ class Industries extends Component {
       </TouchableOpacity>
     )
   });
-  state = {
-    headerFontSize: 20,
-    contentFontSize: 17
-  };
-
-  componentDidMount() {
-    if (Dimensions.get("window").width <= 360) {
-      this.setState({ headerFontSize: 15, contentFontSize: 14 });
-    }
-  }
 
   render() {
+    let headerFontSize;
+    let contentFontSize;
+
+    if (Dimensions.get("window").width <= 360) {
+      headerFontSize = 15;
+      contentFontSize = 14;
+    } else {
+      contentFontSize = 17;
+      headerFontSize = 20;
+    }
     return (
       <View style={MyTheme.Container}>
         <ScrollView
@@ -49,36 +49,22 @@ class Industries extends Component {
           contentContainerStyle={{ flexGrow: 1 }}
         >
           <View style={styles.textHeader}>
-            <Text
-              style={[
-                MyTheme.headerText,
-                { fontSize: this.state.headerFontSize }
-              ]}
-            >
+            <Text style={[MyTheme.headerText, { fontSize: headerFontSize }]}>
               Lorem ipsum dolor sit amet
             </Text>
             <View style={styles.textContentWrapper}>
               <Text
-                style={[
-                  MyTheme.textContent,
-                  { fontSize: this.state.contentFontSize }
-                ]}
+                style={[MyTheme.textContent, { fontSize: contentFontSize }]}
               >
                 Quisque a est vel tortor
               </Text>
               <Text
-                style={[
-                  MyTheme.textContent,
-                  { fontSize: this.state.contentFontSize }
-                ]}
+                style={[MyTheme.textContent, { fontSize: contentFontSize }]}
               >
                 lobortis scelerisque
               </Text>
               <Text
-                style={[
-                  MyTheme.textContent,
-                  { fontSize: this.state.contentFontSize }
-                ]}
+                style={[MyTheme.textContent, { fontSize: contentFontSize }]}
               >
                 vitae id risus.
               </Text>
@@ -91,10 +77,7 @@ class Industries extends Component {
                 <View style={styles.imageContainer}>
                   <Image style={styles.imageSize} source={items.image} />
                   <Text
-                    style={[
-                      MyTheme.headerText,
-                      { fontSize: this.state.headerFontSize }
-                    ]}
+                    style={[MyTheme.headerText, { fontSize: headerFontSize }]}
                   >
                     {items.name}
                   </Text>
@@ -128,7 +111,7 @@ const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "row",
     flexWrap: "wrap",
-    marginTop: 20,
+    marginTop: 20
   },
   detailsWrapper: {
     width: "50%",
