@@ -83,14 +83,14 @@ class ContactUs extends Component {
         <TouchableOpacity onPress={this.openDialer}>
          <View style={styles.detailWrapper}>
         <Icons name="mobile-alt" size={iconSize} color="#0e0f0f"/>
-        <Text style={[MyTheme.textContent, {marginLeft:15,  color:"#000", fontSize:textFontSize}]}>+917-444-2222</Text>
+        <Text style={[MyTheme.textContent, {marginLeft:15,  color:"#000", fontSize:textFontSize , textDecorationLine:"underline"}]}>+917-444-2222</Text>
         </View>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={this.openMail}>
         <View style={styles.detailWrapper}>
         <Icons name="envelope" size={iconSize} color="#0e0f0f"/>
-        <Text style={[MyTheme.textContent, {marginLeft:10, color:"#000", fontSize:textFontSize}]}>business@yondu.com</Text>
+        <Text style={[MyTheme.textContent, {marginLeft:10, color:"#000", fontSize:textFontSize, textDecorationLine:"underline"}]}>business@yondu.com</Text>
         </View>
         </TouchableOpacity>
         </View>

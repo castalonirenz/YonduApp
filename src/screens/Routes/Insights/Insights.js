@@ -107,7 +107,7 @@ class Insights extends Component {
                   {items.content}{" "}
                 </Text>
                 <View style={{ flexDirection: "row", marginTop: 10 }}>
-                  <Text style={{fontSize:miniFontSize, color:"#4EC1FE"}}>{items.details + " - "}</Text>
+                  <Text style={{fontSize:miniFontSize, color:"#4EC1FE", fontStyle:"italic"}}>{items.details + " - "}</Text>
                   <Text style={{fontSize:miniFontSize, color:"#4EC1FE"}}> {items.date} </Text>
                 </View>
               </View>

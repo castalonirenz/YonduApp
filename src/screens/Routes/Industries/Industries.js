@@ -52,13 +52,12 @@ class Industries extends Component {
             <Text style={[MyTheme.headerText, { fontSize: headerFontSize }]}>
               Lorem ipsum dolor sit amet
             </Text>
-            <View style={styles.textContentWrapper}>
               <Text
-                style={[MyTheme.textContent, { fontSize: contentFontSize }]}
+                style={[MyTheme.textContent, { fontSize: contentFontSize, width:"50%", textAlign:"center"}]}
               >
-                Quisque a est vel tortor
+                Quisque a est vel tortor lobortis scelerisque vitae id risus.
               </Text>
-              <Text
+              {/* <Text
                 style={[MyTheme.textContent, { fontSize: contentFontSize }]}
               >
                 lobortis scelerisque
@@ -67,8 +66,7 @@ class Industries extends Component {
                 style={[MyTheme.textContent, { fontSize: contentFontSize }]}
               >
                 vitae id risus.
-              </Text>
-            </View>
+              </Text> */}
           </View>
           <View />
           <View style={styles.itemHolder}>
@@ -103,7 +101,8 @@ const styles = StyleSheet.create({
   },
   textContentWrapper: {
     marginTop: 20,
-    alignItems: "center"
+    alignItems: "center",
+    justifyContent: 'center',
   },
   itemHolder: {
     alignItems: "center",

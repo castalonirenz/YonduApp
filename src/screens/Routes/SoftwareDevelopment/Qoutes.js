@@ -7,8 +7,8 @@ import {
   TouchableOpacity,
   ScrollView
 } from "react-native";
+import { MyPicker } from "../../../components/picker";
 import { MyTheme } from "../../../themes/globalTheme";
-
 import { MyInput } from "../../../components/input";
 import { Formik, Field } from "formik";
 import * as Yup from "yup";
@@ -38,8 +38,7 @@ class componentName extends Component {
     solutionsSelected: ["What solution do you need?"],
     servicesSelected: "Services",
     selectedIndex: "0",
-    solutionList: solutions,
-  
+    solutionList: solutions
   };
 
   initialValues = {
@@ -47,38 +46,46 @@ class componentName extends Component {
     company: "",
     number: "",
     email: "",
-    message: ""
+    message: "",
+    solution: ""
   };
 
-  _handleSubmit =() =>{
-    this.props.navigation.navigate('ThankYou')
-  }
+  _handleSubmit = () => {
+    this.props.navigation.navigate("ThankYou");
+  };
   render() {
-    let solution = []
-    let services = null
-        this.state.solutionList.map((item, key) =>{
-          solution.push (<Picker.Item label={item.name} value={item.name} key={key} />)
-           console.log(item.content, "Solution value from push")
-            console.log(key)
-            })
-            services = solutions[this.state.selectedIndex][this.state.solutionsSelected].map((item, key) => {
-              return(<Picker.Item label={item} value={item} key={key} />)
-            
-            })
-            console.log(solutions)
+    let solution = [];
+    let services = null;
+
+    this.state.solutionList.map((item, key) => {
+      solution.push(
+        <Picker.Item label={item.name} value={item.name} key={key} />
+      );
+      console.log(item.content, "Solution value from push");
+      console.log(key);
+    });
+    services = solutions[this.state.selectedIndex][
+      this.state.solutionsSelected
+    ].map((item, key) => {
+      return <Picker.Item label={item} value={item} key={key} />;
+    });
+    console.log(solutions);
+
     return (
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View style={MyTheme.Container}>
           <View style={styles.pickerContainer}>
             <Picker
-              style={styles.pickerStyle}
+              PickerStyle={styles.pickerStyle}
               mode="dropdown"
               selectedValue={this.state.solutionsSelected}
               onValueChange={(itemValue, itemIndex) =>
-                this.setState({ solutionsSelected: itemValue, selectedIndex:itemIndex })
+                this.setState({
+                  solutionsSelected: itemValue,
+                  selectedIndex: itemIndex
+                })
               }
             >
-              
               {solution}
             </Picker>
           </View>
@@ -92,8 +99,7 @@ class componentName extends Component {
                 this.setState({ servicesSelected: itemValue })
               }
             >
-        
-            {services}
+              {services}
             </Picker>
           </View>
 
@@ -125,6 +131,16 @@ class componentName extends Component {
                 resetForm
               }) => (
                 <View style={{ width: "100%", marginTop: 10 }}>
+                  <View style={styles.pickerContainer}>
+                    <MyPicker
+                      style={styles.pickerStyle}
+                      mode="dropdown"
+                      data={this.state.solutionList}
+                      selectedValue={values.solution}
+                      onValueChange={handleChange("solution")}
+                    />
+                  </View>
+
                   <View style={MyTheme.inputWrapper}>
                     <MyInput
                       onChangeText={handleChange("name")}
@@ -204,7 +220,7 @@ const styles = StyleSheet.create({
   },
   pickerContainer: {
     marginTop: 20,
-    width: "90%",
+    width: "100%",
     borderBottomWidth: 2,
     borderBottomColor: "#EFF0F4"
   },
