@@ -12,7 +12,7 @@ import LOGO from './src/screens/splashScreen';
 import HomeScreen from './src/screens/homeScreen';
 //import { FirstRouteStackContainer } from "./src/navigators/stackNavigator";
 import { FirstRouteContainer } from "./src/navigators/drawerNavigator";
-
+import { NewsLetterStackContainer } from "./src/navigators/FirstRoute/StackNavigator";
 export default class App extends Component{
   render() {
     return <SwitchContainer/>
@@ -22,7 +22,8 @@ export default class App extends Component{
 const SwitchNavigator = createSwitchNavigator({
   SplashScreen: LOGO,
   Auth: HomeScreen,
-  FirstRoute: FirstRouteContainer
+  FirstRoute: FirstRouteContainer,
+  Subscribe: NewsLetterStackContainer
 
 
 

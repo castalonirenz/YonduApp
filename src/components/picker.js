@@ -10,8 +10,8 @@ export const MyPicker = props =>(
         return(
             <Picker.Item
             key={index}
-            label={items.name}
-            value={items.name}/>
+            label={items.name || items}
+            value={items.name || items}/>
         )
     })}
     </Picker>

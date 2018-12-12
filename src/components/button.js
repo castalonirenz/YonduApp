@@ -4,7 +4,7 @@ export const MyButton = props => (
     <View>
         <TouchableOpacity 
         {...props}
-        style={[styles.ButtonStyle, props.style]}>
+        style={[styles.ButtonStyle, props.ButtonStyle]}>
             <Text
             {...props}
             style={[styles.textStyle, props.style]}>
@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
         height: 40,
         borderRadius: 25,
         borderWidth: 1,
-        borderColor: "#298F78",
-        backgroundColor:"#298F78",
+        borderColor: "#66CC98",
+        backgroundColor:"#66CC98",
         marginBottom: 10,
         marginTop: 5,
         justifyContent: 'center',

@@ -7,11 +7,13 @@ class LOGO extends Component {
   render() {
     return (
       <View style={MyTheme.Container}>
-      <TouchableOpacity onPress={()=> this.props.navigation.navigate('Auth')}>
+      <TouchableOpacity 
+      style={{width:"100%", height:"100%"}}
+      onPress={()=> this.props.navigation.navigate('Auth')}>
         <Image 
-        style={MyTheme.imageLogo}
-        resizeMode="contain"
-        source={require('../../assets/yonduLogo.png')}/>
+         style={{height:"100%", width:"100%"}}
+        resizeMode="stretch"
+        source={require('../../assets/loading_page.png')}/>
         </TouchableOpacity>
       </View>
     );

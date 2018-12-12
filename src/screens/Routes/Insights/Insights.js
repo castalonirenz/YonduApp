@@ -18,11 +18,11 @@ class Insights extends Component {
     headerTitleStyle: MyTheme.headerWrapper,
     headerLeft: (
       <TouchableOpacity
-        onPress={() => navigation.toggleDrawer()}
+      onPress={() => navigation.navigate("Auth")}
         style={{ paddingLeft: 20 }}
       >
         <Icon
-          name="md-menu"
+          name="md-arrow-back"
           // color={tintColor}
           size={24}
         />

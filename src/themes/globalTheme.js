@@ -5,8 +5,8 @@ export const MyTheme = StyleSheet.create({
     flex: 1,
     width: "100%",
     alignItems: "center",
-   justifyContent: "center"
-    // backgroundColor:"#FFFFFF"
+   justifyContent: "center",
+    // backgroundColor:"#65CD9B"
   },
   imageLogo: {
     height: 150,
@@ -29,7 +29,8 @@ export const MyTheme = StyleSheet.create({
   },  
   headerWrapper: {
     textAlign: "center",
-    width: "80%"
+    width: "80%",
+    
   },
   inputWrapper: {
     borderBottomColor: "#EFF0F4",

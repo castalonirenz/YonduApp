@@ -12,72 +12,96 @@ export const solutions = [
   {
     id: 0,
     name: "What solution do you need?",
-    "What solution do you need?":[
-      "Services",
-    ]
    
   },
   {
     id: 1,
     name: "Software Development",
-    "Software Development":[
-      "Web Application Development",
-      "Mobile Application Development",
-      "Enterprise Solution",
-      "System Integration",
-    ]
+   
    
   },
     {
       id: 2,
       name: "Managed Services",
-      "Managed Services":[
-        "Managed Desktop Service",
-        "Managed Expert Service",
-        "Managed System Admin",
-        "Managed App Services"
-      ]
+    
      
     },
     {
       id: 3,
       name: "IT Staffing",
-      "IT Staffing":[
-        "Staff Augmentation"
-      ]
-    
+     
     },
     {
       id: 4,
       name: "Cyber Security",
-      "Cyber Security":[
-        "Vulnerability Assesment",
-        "Software QA as as Service"
-      ]
+      
       
     },
     {
       id: 5,
       name: "Trainings & Development",
-      "Trainings & Development":[
-        "Java",
-        "Blockchain"
-      ]
+     
      
     }
     ,
     {
       id: 6,
       name: "Enterprise Solutions",
-      "Enterprise Solutions":[
-        "ViMa",
-        "HR Solutions",
-        "SMS (M360)",
-        "Document Management System"
-      ]
      
     }
   ];
+
+  export const services = {
+      
+      "What solution do you need?":[
+        "Services"
+      ],
+   
+    
+      "Software Development":[
+        "Web Application Development",
+        "Mobile Application Development",
+        "Enterprise Solution",
+        "System Integration",
+    
+      ],
+      
+        "Managed Services":[
+          "Managed Desktop Service",
+          "Managed Expert Service",
+          "Managed System Admin",
+          "Managed App Services"
+        ],
+       
+      
+      
+        "IT Staffing":[
+          "Staff Augmentation"
+        ],
+      
+    
+     
+        "Cyber Security":[
+          "Vulnerability Assesment",
+          "Software QA as as Service"
+        ],
+     
+  
+        "Trainings & Development":[
+          "Java",
+          "Blockchain"
+        ],
+       
+      
+        "Enterprise Solutions":[
+          "ViMa",
+          "HR Solutions",
+          "SMS (M360)",
+          "Document Management System"
+        ]
+       
+      }
+    
   
   export const WhatWeDo = [
     {

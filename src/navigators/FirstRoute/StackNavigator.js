@@ -10,7 +10,7 @@ import ThankYouPage from "../../screens/Routes/SoftwareDevelopment/ThankYou";
 import Insights from "../../screens/Routes/Insights/Insights";
 import InsightsData from "../../screens/Routes/Insights/InsightsData";
 import ContactUs from "../../screens/Routes/contact_us/contact_us";
-
+import NewsLetter from "../../screens/Routes/subscribe/newsLetter"
 const SDevelopmentStack = createStackNavigator(
   {
     SDevelopment: {
@@ -22,6 +22,14 @@ const SDevelopmentStack = createStackNavigator(
     ThankYou:{
       screen: ThankYouPage
     }
+   
+  },{
+    defaultNavigationOptions:{
+      headerTintColor:"#FFF",
+      headerStyle:{
+        backgroundColor:"#67CC9C"
+      }
+    }
   }
 );
 export const SDevelopmentContainer = createAppContainer(SDevelopmentStack);
@@ -30,6 +38,13 @@ const IndustriesStack = createStackNavigator(
   {
     Industries: {
       screen: Industries
+    }
+  },{
+    defaultNavigationOptions:{
+      headerTintColor:"#FFF",
+      headerStyle:{
+        backgroundColor:"#67CC9C"
+      }
     }
   }
 );
@@ -43,6 +58,13 @@ const InsightsStack = createStackNavigator({
     InsightsData:{
       screen: InsightsData
     }
+},{
+  defaultNavigationOptions:{
+    headerTintColor:"#FFF",
+    headerStyle:{
+      backgroundColor:"#67CC9C"
+    }
+  }
 })
 
 export const InsightsContainer = createAppContainer(InsightsStack);
@@ -51,7 +73,29 @@ const contactUsStack = createStackNavigator({
   Contact:{
     screen: ContactUs
   }
+},{
+  defaultNavigationOptions:{
+    headerTintColor:"#FFF",
+    headerStyle:{
+      backgroundColor:"#67CC9C"
+    }
+  }
 })
 
 export const ContactUsContainer = createAppContainer(contactUsStack)
+
+const NewsLetterStack = createStackNavigator({
+  NewsLetter:{
+    screen: NewsLetter
+  }
+},{
+  defaultNavigationOptions:{
+    headerTintColor:"#FFF",
+    headerStyle:{
+      backgroundColor:"#67CC9C"
+    }
+  }
+})
+
+export const NewsLetterStackContainer = createAppContainer(NewsLetterStack)
 
