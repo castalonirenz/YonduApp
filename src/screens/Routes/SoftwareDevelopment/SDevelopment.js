@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Dimensions } from
 import Icon from "react-native-vector-icons/Ionicons";
 import { MyTheme } from "../../../themes/globalTheme";
 import { MyButton } from "../../../components/button";
-import { Company, WhatWeDo } from "../../../Array/stringName";
+import { Company, WhatWeDo } from "../../../Array/SoftwareArray";
 class SDevelopment extends Component {
 
   state ={

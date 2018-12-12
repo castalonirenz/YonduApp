@@ -11,6 +11,7 @@ import Insights from "../../screens/Routes/Insights/Insights";
 import InsightsData from "../../screens/Routes/Insights/InsightsData";
 import ContactUs from "../../screens/Routes/contact_us/contact_us";
 import NewsLetter from "../../screens/Routes/subscribe/newsLetter"
+import About from "../../screens/Routes/about/about";
 const SDevelopmentStack = createStackNavigator(
   {
     SDevelopment: {
@@ -99,3 +100,17 @@ const NewsLetterStack = createStackNavigator({
 
 export const NewsLetterStackContainer = createAppContainer(NewsLetterStack)
 
+const AboutStack = createStackNavigator({
+  About:{
+    screen: About
+  }
+},{
+  defaultNavigationOptions:{
+    headerTintColor:"#FFF",
+    headerStyle:{
+      backgroundColor:"#67CC9C"
+    }
+  }
+})
+
+export const AboutStackContainer = createAppContainer(AboutStack)

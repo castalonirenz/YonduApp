@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import { MyTheme } from "../../../themes/globalTheme";
-import { Company } from "../../../Array/stringName";
+import { Company } from "../../../Array/SoftwareArray";
 class InsightsData extends Component {
 
   static navigationOptions = {

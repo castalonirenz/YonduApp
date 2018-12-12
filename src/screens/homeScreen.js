@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
 import { MyTheme } from "../themes/globalTheme";
-import { Company } from "../Array/stringName";
+import { Company } from "../Array/SoftwareArray";
 import { home } from "../Array/homeScreenArray";
 class HomeScreen extends Component {
   _Navigate = val => {

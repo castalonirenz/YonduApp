@@ -8,10 +8,11 @@ import {
   SDevelopmentContainer,
   IndustriesStackContainer,
   InsightsContainer,
-  ContactUsContainer
+  ContactUsContainer,
+  AboutStackContainer
 } from "./FirstRoute/StackNavigator";
 import React, { Component } from "react";
-import { Company } from "../Array/stringName";
+import { Company } from "../Array/SoftwareArray";
 import {
   View,
   SafeAreaView,
@@ -41,11 +42,12 @@ const CustomDrawerComponent = props => (
       />
     </ImageBackground>
     <ScrollView>
-      <DrawerItems {...props} />
+      <DrawerItems 
+      {...props} />
     </ScrollView>
     <View style={{paddingLeft: 15, height: "5%" }}>
     <TouchableOpacity onPress={()=> props.navigation.navigate('Subscribe')}>
-      <Text style={[MyTheme.textContent, {fontWeight:"bold"}]}>Subscribe with Email</Text>
+      <Text style={[MyTheme.textContent, { fontSize: 15}]}>Subscribe with Email</Text>
       </TouchableOpacity>
     </View>
   </SafeAreaView>
@@ -66,7 +68,7 @@ const FirstRouteDrawer = createDrawerNavigator(
       screen: SDevelopmentContainer
     },
     [Company.itemFive]: {
-      screen: SDevelopmentContainer
+      screen: AboutStackContainer
     },
     [Company.itemSix]: {
       screen: ContactUsContainer
@@ -78,7 +80,8 @@ const FirstRouteDrawer = createDrawerNavigator(
       activeTintColor: "#298F78",
       inactiveTintColor:"#969797",
       labelStyle: {
-        fontSize: 18
+        fontSize: 15,
+        fontWeight:"normal"
       }
     }
   }

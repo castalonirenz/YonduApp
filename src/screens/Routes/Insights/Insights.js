@@ -8,7 +8,7 @@ import {
   Dimensions
 } from "react-native";
 import React, { Component } from "react";
-import { Company } from "../../../Array/stringName";
+import { Company } from "../../../Array/SoftwareArray";
 import Icon from "react-native-vector-icons/Ionicons";
 import { MyTheme } from "../../../themes/globalTheme";
 import { insights } from "../../../Array/insightsArray";

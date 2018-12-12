@@ -14,8 +14,10 @@ import { Formik, Field } from "formik";
 import * as Yup from "yup";
 import Icon from "react-native-vector-icons/Ionicons";
 import { MyButton } from "../../../components/button";
-import { solutions, services } from "../../../Array/stringName";
+import { solutions, services } from "../../../Array/SoftwareArray";
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
+const axios = require("axios");
 class componentName extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: "Get a Quote",
@@ -44,8 +46,20 @@ class componentName extends Component {
     services:""
   };
 
-  _handleSubmit = () => {
-    this.props.navigation.navigate("ThankYou");
+  _handleSubmit = (values) => {
+   
+    axios.post('http://192.168.190.20:3000/qoute_list', {
+    ...values
+    })
+    .then(response => {
+      console.log(response ,"RESPONSE");
+      alert('Quote Success')
+      this.props.navigation.navigate("ThankYou");
+    })
+    .catch(error => {
+      console.log(error, "MAGIC ERROR");
+    });
+
   };
   render() {
     console.log(services["Software Development"])
