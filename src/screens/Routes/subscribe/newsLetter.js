@@ -20,7 +20,7 @@ class NewsLetter extends Component {
       >
         <Icon
           name="ios-arrow-back"
-          // color={tintColor}
+          color={"#FFF"}
           size={24}
         />
       </TouchableOpacity>
@@ -28,7 +28,7 @@ class NewsLetter extends Component {
   });
 
   _handleSubmit = (values) => {
-    alert('weh')
+    alert('Success')
 
     axios.post('http://192.168.190.20:3000/newsletter', {
       email: values.email
@@ -36,7 +36,7 @@ class NewsLetter extends Component {
       .then(response => {
         console.log(response ,"RESPONSE");
         alert('Success')
-        this.props.navigation.navigate("Auth");
+        this.props.navigation.navigate("ThankYou");
       })
       .catch(error => {
         console.log(error, "MAGIC ERROR");

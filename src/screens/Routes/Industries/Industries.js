@@ -24,7 +24,7 @@ class Industries extends Component {
       >
         <Icon
           name="md-menu"
-          // color={tintColor}
+          color={"#FFF"}
           size={24}
         />
       </TouchableOpacity>

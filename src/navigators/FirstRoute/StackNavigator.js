@@ -103,6 +103,9 @@ export const NewsLetterStackContainer = createAppContainer(NewsLetterStack)
 const AboutStack = createStackNavigator({
   About:{
     screen: About
+  },
+  ThankYou:{
+    screen: ThankYouPage
   }
 },{
   defaultNavigationOptions:{

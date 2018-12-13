@@ -22,7 +22,7 @@ class About extends Component {
       >
         <Icon
           name="ios-arrow-back"
-          // color={tintColor}
+          color={"#FFF"}
           size={24}
         />
       </TouchableOpacity>

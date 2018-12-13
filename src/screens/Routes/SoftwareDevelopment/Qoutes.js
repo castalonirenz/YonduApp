@@ -30,7 +30,7 @@ class componentName extends Component {
       >
         <Icon
           name="md-arrow-back"
-          // color={tintColor}
+           color={"#FFF"}
           size={24}
         />
       </TouchableOpacity>
@@ -213,7 +213,9 @@ const styles = StyleSheet.create({
   },
 
   messageInputWrapper: {
-    height: 250,
+    // height: 250,
+    flex: 1,
+    
     borderBottomColor: "#EFF0F4",
     borderBottomWidth: 2
   },

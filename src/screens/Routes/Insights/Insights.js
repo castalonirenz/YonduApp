@@ -23,7 +23,7 @@ class Insights extends Component {
       >
         <Icon
           name="md-arrow-back"
-          // color={tintColor}
+          color={"#FFF"}
           size={24}
         />
       </TouchableOpacity>

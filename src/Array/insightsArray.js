@@ -22,7 +22,7 @@ export const insights = [
     id: 2,
     title: "PHP Development",
     content: "Dutch PHP Conference 2019.",
-    details: "Php",
+    details: "Web Application",
     date: "Nov 7, 2018",
     img:
       "https://www.agriya.com/blog/wp-content/uploads/2017/07/PHP-development.png",
